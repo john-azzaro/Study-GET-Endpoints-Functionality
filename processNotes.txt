@@ -1,0 +1,12 @@
+Process Notes for GET endpoints study
+======================================
+o   The GET endpoints study takes the Thinkful node shopping list model and demonstrates how to use
+    the GET HTTP method to retrieve somethign from our shopping list.
+
+STEP 1:  Setup your project
+===========================
+    o   This involves setting up your folder, cloning the project, installing dependencies, etc.
+
+STEP 2: Run "nodemon server.js"
+===============================
+    o   This will run the server and account for any changes you make by essentially restarting the server.
