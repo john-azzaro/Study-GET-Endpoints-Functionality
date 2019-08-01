@@ -2,6 +2,9 @@ Process Notes for GET endpoints study
 ======================================
 o   The GET endpoints study takes the Thinkful node shopping list model and demonstrates how to use
     the GET HTTP method to retrieve somethign from our shopping list.
+---------------------------------------------------------------------------------------------    
+o   IMPORTANT: For this study, you will also need to have POSTMAN to test the requests made.
+---------------------------------------------------------------------------------------------
 
 STEP 1:  Setup your project
 ===========================
@@ -10,3 +13,30 @@ STEP 1:  Setup your project
 STEP 2: Run "nodemon server.js"
 ===============================
     o   This will run the server and account for any changes you make by essentially restarting the server.
+
+                $ nodemon server.js
+                [nodemon] 1.19.1
+                [nodemon] to restart at any time, enter `rs`
+                [nodemon] watching: *.*
+                [nodemon] starting `node server.js`
+                Creating new shopping list item
+                Creating new shopping list item
+                Creating new shopping list item
+                Your app is listening on port 8080                   
+
+
+STEP 3: Send a GET request to Postman
+======================================= 
+    o   In Postman, when you send a GET request to "localhost:8080/shopping-list", you will get a JSON response 
+        containing an array of shopping list items, each with a name, id, and budget.
+
+    o   In your server logs, you will see this: 
+
+                Retrieving shopping list items
+                ::1 - - [01/Aug/2019:23:39:28 +0000] "GET /shopping-list HTTP/1.1" 200 222
+
+    o   WHAT HAPPENED?  We sent a request to the server to GET (or retrieve) a list of shopping list items.
+    
+            o   First, we imported the "ShoppingList" model to interact with the GET endpoints
+
+                const {ShoppingList} = require('/models')
