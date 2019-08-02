@@ -1,7 +1,7 @@
 Process Notes for GET endpoints study
 ======================================
 o   The GET endpoints study takes the Thinkful node shopping list model and demonstrates how to use
-    the GET HTTP method to retrieve somethign from our shopping list.
+    the GET HTTP method to retrieve somethign from our shopping list.  More examples to follow.
 ---------------------------------------------------------------------------------------------    
 o   IMPORTANT: For this study, you will also need to have POSTMAN to test the requests made.
 ---------------------------------------------------------------------------------------------
@@ -25,8 +25,8 @@ STEP 2: Run "nodemon server.js"
                 Your app is listening on port 8080                   
 
 
-STEP 3: Send a GET request to Postman
-======================================= 
+STEP 3: Send a GET request to Postman (and get a response of shopping items);
+============================================================================== 
     o   In Postman, when you send a GET request to "localhost:8080/shopping-list", you will get a JSON response 
         containing an array of shopping list items, each with a name, id, and budget.
 
@@ -35,8 +35,20 @@ STEP 3: Send a GET request to Postman
                 Retrieving shopping list items
                 ::1 - - [01/Aug/2019:23:39:28 +0000] "GET /shopping-list HTTP/1.1" 200 222
 
-    o   WHAT HAPPENED?  We sent a request to the server to GET (or retrieve) a list of shopping list items.
+
+    o   SO WHAT HAPPENED?  We sent a request to the server to GET (or retrieve) a list of shopping list items.
     
-            o   First, we imported the "ShoppingList" model to interact with the GET endpoints
+            o   First, we imported the "ShoppingList" model to interact with the GET endpoints.
 
                 const {ShoppingList} = require('/models')
+
+            o   Second, the items that we added (in server.js but normally this would be seperate) are retrieved.
+
+            o   Third, the GET endpoint for the route "/shopping-list" is setup.
+
+            o   IN SUM: When you send a GET request (i.e. request in the browser) for "/shopping-list", the app will respond "serializing"
+                which is transforming to JSON the data returned by ShoppingList.get();, which is the list of current shopping list items.  
+
+                        [{"name":"beans","id":"5efc31b8-b474-45cb-b7a4-923a40fe4b79","budget":2},
+                         {"name":"tomatoes","id":"69e50be6-9964-47bf-8f54-825f8d42ea54","budget":3},
+                         {"name":"peppers","id":"670bdc8c-f242-4d69-9666-9814e93ed98f","budget":4}]    
