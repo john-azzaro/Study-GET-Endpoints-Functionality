@@ -37,5 +37,4 @@ Since this study is ongoing, basic functionalities are covered first and more ad
 <br>
 
 ## Screenshots
-![postmanGET](https://user-images.githubusercontent.com/37447586/62345416-326c3080-b4a7-11e9-8ced-ce7db78822a4.png)
-
+![postmanGET](https://user-images.githubusercontent.com/37447586/62336155-df34b680-b483-11e9-8dc8-219c614cf9ad.png)
