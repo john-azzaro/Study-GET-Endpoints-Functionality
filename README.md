@@ -7,7 +7,7 @@ The "GET Endpoints Functionality Study" demonstrates the basic functionalities o
 
 <br>
 
-In an express application, to handle a GET request to an endpoint, you would simply call the app object (note the use of cond app = require('express') ) with the GET method.  You would then specfiy a path and then the route handler (i.e. req, res).  Inside the code block would be the response.
+In an express application, to handle a GET request to an endpoint, you would simply call the app object (note the use of ```cond app = require('express')``` which instantiates the app and lets us use express) with the GET method.  You would then specfiy a path and then the route handler (i.e. req, res).  Inside the code block would be the response.
 
 ```JavaScript
 
